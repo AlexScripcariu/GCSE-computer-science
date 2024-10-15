@@ -39,15 +39,5 @@ import math
 
 # # challenge 34
 
-options = ["square", "triangle"]
-selected = -1
-while selected != -1:
-    for i,v in enumerate(options):
-        print(f"{i + 1}) {v.title()}")
-    selected = int(input("Please enter one of the options"))
-    if not(1 <= selected <= len(options)):
-        continue
-    elif selected == 1:
-        pass
-    elif selected == 2:
-        pass
+
+
