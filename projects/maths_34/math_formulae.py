@@ -67,4 +67,4 @@ def hemisphere_volume(radius):
 # trigonometric formulae
 
 def cosine_rule_side(b, c, A):
-       return (b ** 2 + c ** 2 - 2 * b * c ) ** 0.5
+       return (b ** 2 + c ** 2 - 2 * b * c  * math.cos(A)) ** 0.5
