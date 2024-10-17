@@ -1,22 +1,25 @@
 import projects.maths_34.math_formulae as formulas
 
+OPTION_FORMULA = ["Surface Area", "Area", "Volume", "Trigonometry"]
+OPTION_SHAPE_3D = ["cube", "rectangular prism", "cylinder",
+                             "cone", "sphere", "hemisphere"]
+OPTION_SHAPE_2D = ["square", "rectangle", "trapezoid", "triangle",
+                   "circle", "ellipse"]
+OPTION_TRIGONOMETRY = ["cosine rule", "triangle"]
 
-def main():
-    options = ["square", "triangle"]
+
+def display_items(options: list[str]) -> int:
     selected = -1
     while selected != -1:
         for i,v in enumerate(options):
             print(f"{i + 1}) {v.title()}")
-        selected = int(input("Please enter one of the options"))
-        if not(1 <= selected <= len(options)):
-            continue
-        elif selected == 1:
-            side_length = int(input("Please enter the length of one side: "))
-            formulas.square_area(side_length)
-        elif selected == 2:
-            base_length = int(input("Enter the length of the base of the triangle: "))
-            height_length = int(input("Enter the length of the height of the triangle: "))
-            formulas.triangle_area(base_length, height_length)
+        selected = int(input("Please select an option: "))
+        if 1 <= selected <= len(options):
+            return selected
+
+
+def main():
+    print("Math-a-matics\n" + "-" * 20)
 
 
 if __name__ == "__main__":
